@@ -3,24 +3,23 @@ import java.util.Scanner;
 public class ReverseString {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String reverse = "";
+        StringBuilder reverse = new StringBuilder();
 
         System.out.println("Please Enter Value...");
         String input = scanner.next();
-        String forCharArray = input;
 
         int length = input.length();
 
         for (int i = length - 1; i>0; i--){
-            reverse = reverse + input.charAt(i);
+            reverse.append(input.charAt(i));
         }
 
         System.out.println("[Method 01] Reverse number is "+reverse);
 
-        char[] reverseArray = forCharArray.toCharArray();
-        reverse = "";
-        for (int i = forCharArray.length()-1; i>0; i--){
-            reverse = reverse+reverseArray[i];
+        char[] reverseArray = input.toCharArray();
+        reverse = new StringBuilder();
+        for (int i = input.length()-1; i>0; i--){
+            reverse.append(reverseArray[i]);
         }
         System.out.println("[Method 02] Reverse number is "+reverse);
 

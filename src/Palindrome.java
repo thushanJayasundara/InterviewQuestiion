@@ -6,20 +6,20 @@ public class Palindrome {
 
 
         System.out.println("Please Enter Value...");
+
         String input = scanner.next();
-        String organizedString = input;
-        String reverse = "";
+        StringBuilder reverse = new StringBuilder();
 
         int length = input.length();
 
         for (int i = length-1; i>=0; i-- ){
-            reverse = reverse+input.charAt(i);
+            reverse.append(input.charAt(i));
         }
 
-        if (organizedString.equals(reverse)){
-            System.out.println(organizedString+" is a palinedrome String");
+        if (input.contentEquals(reverse)){
+            System.out.println(input +" is a palindrome String");
         }else {
-            System.out.println(organizedString+" isn't a palinedrome String");
+            System.out.println(input +" isn't a palindrome String");
         }
     }
 }

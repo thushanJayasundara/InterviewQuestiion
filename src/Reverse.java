@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class Reverse {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
-        int number = 0, reverseNumber = 0,numberForStringBuffer = 0, numberForStringBuilder = 0;
+        int number, reverseNumber = 0,numberForStringBuffer, numberForStringBuilder;
 
         System.out.println("Please Enter Number...");
 
@@ -16,6 +18,7 @@ public class Reverse {
             reverseNumber = reverseNumber * 10 + number % 10;
             number = number / 10;
         }
+
         System.out.println("[Method 01] Reverse number is "+reverseNumber);
 
         StringBuffer stringBuffer = new StringBuffer(String.valueOf(numberForStringBuffer));

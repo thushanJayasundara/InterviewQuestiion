@@ -2,7 +2,7 @@ public class Swap {
     public static void main(String[] args) {
         int num1 = 10, num2 = 20;
         System.out.println("Before swapping values are "+num1+" / "+num2);
-        System.out.println("");
+
 
         // 1st method
         int t = num1;
