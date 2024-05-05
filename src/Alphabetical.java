@@ -12,24 +12,24 @@ public class Alphabetical {
         List<String> output = new ArrayList<>();
 
         System.out.println("Please enter String value.");
-        String input = scanner.next().trim();
 
-        if (!input.isEmpty()) {
+        String input = scanner.nextLine().trim();
+        String inputWithoutSpaces = input.replaceAll("\\s+", "");
 
-            for (int i = 0; i < input.length(); i++) {
+        if (!inputWithoutSpaces.isEmpty()) {
 
-                char letter = input.charAt(i);
+            for (int i = 0; i < inputWithoutSpaces.length(); i++) {
 
-                if (Character.isUpperCase(letter)) {
-                    output.add(String.valueOf(letter));
-                }
-                if (Character.isLowerCase(letter)) {
+                char letter = inputWithoutSpaces.charAt(i);
+
+                if (Character.isLetter(letter)) {
                     output.add(String.valueOf(letter));
                 }
             }
 
             output.sort(String.CASE_INSENSITIVE_ORDER);
 
+            System.out.println("Sorted characters (case-insensitive):");
             output.forEach(System.out::println);
         }
     }
